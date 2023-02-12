@@ -1,0 +1,35 @@
+@use '../variables'
+@use '../mixins'
+
+
+#main-content
+    background-color: variables.$bg-color
+    flex: 2 1 0
+    border-radius: variables.$container-border-radius
+    padding: 3rem
+
+    section
+        display: flex
+        flex-direction: column
+
+    h2
+        color: variables.$text-color
+        font-size: 2.2rem
+        margin-bottom: 1.3rem
+        @include mixins.center
+        justify-content: start
+        @include mixins.bg-title
+        gap: 1rem
+        font-family: redDead
+        padding-left: .5rem
+        text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black
+        
+
+    p
+        color: variables.$text-color-secondary
+        margin-bottom: 1rem
+        line-height: 1.4rem
+
+    .btn
+        @include mixins.btn
+        align-self: start
